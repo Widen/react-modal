@@ -290,6 +290,7 @@ export default class ModalPortal extends Component {
 
   handleKeyDown = event => {
     if (isTabKey(event)) {
+      event.stopPropagation();
       scopeTab(this.content, event);
     }
 
