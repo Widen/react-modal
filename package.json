@@ -1,12 +1,12 @@
 {
-  "name": "react-modal",
+  "name": "@widen/react-modal",
   "version": "3.16.2",
   "description": "Accessible modal dialog component for React.JS",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/react-modal.git"
+    "url": "https://github.com/Widen/react-modal"
   },
   "homepage": "https://github.com/reactjs/react-modal",
   "bugs": "https://github.com/reactjs/react-modal/issues",
@@ -18,9 +18,7 @@
     "test": "cross-env NODE_ENV=test karma start",
     "lint": "eslint src/"
   },
-  "authors": [
-    "Ryan Florence"
-  ],
+  "author": "Widen",
   "license": "MIT",
   "devDependencies": {
     "@webcomponents/custom-elements": "^1.5.0",
