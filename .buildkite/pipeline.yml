@@ -35,3 +35,4 @@ steps:
           - FORCE_COLOR=true
     env:
       NPM_TAG: latest
+      NODE_AUTH_TOKEN: ACQUIA_JFROG_TOKEN
