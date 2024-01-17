@@ -27,11 +27,10 @@ steps:
     agents:
       queue: builder
     plugins:
-      docker#v3.5.0:
-        image: quay.io/widen/builder-nodejs:16
-        environment:
-          - ACQUIA_JFROG_TOKEN
-          - FORCE_COLOR=true
+      - docker#v3.5.0:
+          image: quay.io/widen/builder-nodejs:16
+          environment:
+            - ACQUIA_JFROG_TOKEN
+            - FORCE_COLOR=true
     env:
       NPM_TAG: latest
-      ACQUIA_JFROG_TOKEN
