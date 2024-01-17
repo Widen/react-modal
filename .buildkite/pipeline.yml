@@ -26,11 +26,12 @@ steps:
     branches: master
     agents:
       queue: builder
-    plugins:
-      - docker#v3.5.0:
-          image: quay.io/widen/builder-nodejs:16
-          environment:
-            - ACQUIA_JFROG_TOKEN
-            - FORCE_COLOR=true
+    plugins: &docker
+      docker#v3.5.0:
+        image: quay.io/widen/builder-nodejs:16
+        propagate-environment: true
+        environment:
+          - ACQUIA_JFROG_TOKEN
+          - FORCE_COLOR=true
     env:
       NPM_TAG: latest
