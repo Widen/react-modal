@@ -6,7 +6,6 @@ TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha
 TAG_VERSION=${TAG_VERSION/v/}
 
 # Publish the package
-npm version ${TAG_VERSION}
 npm publish --tag ${TAG_VERSION}
 
 # Annotate the build with the types version
