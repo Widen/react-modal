@@ -1,3 +1,3 @@
 npmRegistryServer: "https://jfrog.ais.acquia.io/artifactory/api/npm/widen-npm-virtual/"
-registry: "https://jfrog.ais.acquia.io/artifactory/api/npm/widen-npm-virtual/"
+registry: "https://jfrog.ais.acquia.io/artifactory/api/npm/npm-local/"
 npmAlwaysAuth: true
