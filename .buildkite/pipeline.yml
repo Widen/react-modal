@@ -1,7 +1,7 @@
 steps:
   - label: ":spiral_note_pad: Build"
     command: ./bksh add-release-block-step-from-draft
-    branches: main
+    branches: master
     agents:
       queue: builder
 
@@ -9,7 +9,7 @@ steps:
 
   - label: ":git: Create release"
     command: ./bksh create-release
-    branches: main
+    branches: master
     agents:
       queue: builder
 
@@ -17,13 +17,13 @@ steps:
 
   - label: ":git: Delete draft release"
     command: "./bksh delete-draft-release"
-    branches: main
+    branches: master
     agents:
       queue: builder
 
   - label: ":rocket: Release"
     command: .buildkite/deploy.sh
-    branches: main
+    branches: master
     agents:
       queue: deploy-prod
     plugins: *docker
