@@ -7,7 +7,7 @@ TAG_VERSION=${TAG_VERSION/v/}
 
 # Publish the package
 sed -i "s/0.0.0-ci-released/$TAG_VERSION/g" package.json
-yarn npm publish --tag ${NPM_TAG}
+yarn publish --tag ${NPM_TAG}
 
 # Annotate the build with the types version
 buildkite-agent annotate --style success "Published to \`@widen/react-modal@${TAG_VERSION}\`. Install with the following command:
