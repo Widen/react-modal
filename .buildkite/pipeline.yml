@@ -31,13 +31,14 @@ steps:
           image: quay.io/widen/builder-nodejs:16
           propagate-environment: true
           environment:
+            - ACQUIA_JFROG_USER
             - ACQUIA_JFROG_TOKEN
             - FORCE_COLOR=true
-      - thedyrt/git-commit#v0.3.0:
-          message: Auto version
-          user:
-            name: Widen Developers
-            email: widendev@widen.com
+      # - thedyrt/git-commit#v0.3.0:
+      #     message: Auto version
+      #     user:
+      #       name: Widen Developers
+      #       email: widendev@widen.com
     env:
       NPM_TAG: latest
       NODE_AUTH_TOKEN: ACQUIA_JFROG_TOKEN
