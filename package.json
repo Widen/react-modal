@@ -4,7 +4,6 @@
   "description": "Accessible modal dialog component for React.JS",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
-  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Widen/react-modal"
@@ -13,6 +12,13 @@
   "bugs": "https://github.com/reactjs/react-modal/issues",
   "directories": {
     "example": "examples"
+  },
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./lib/index.js"
+    }
   },
   "scripts": {
     "start": "npx webpack-dev-server --config ./scripts/webpack.config.js --inline --host 127.0.0.1 --content-base examples/",
