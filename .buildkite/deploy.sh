@@ -5,6 +5,7 @@ set -euo pipefail
 TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha-$(date +%Y%m%d%H%M%S)")
 TAG_VERSION=${TAG_VERSION/v/}
 
+yarn
 make compile
 
 # Publish the package
