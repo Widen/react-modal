@@ -1,6 +1,6 @@
 {
   "name": "@widen/react-modal",
-  "version": "3.16.9",
+  "version": "3.16.10",
   "description": "Accessible modal dialog component for React.JS",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
