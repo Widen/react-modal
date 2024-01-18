@@ -13,7 +13,6 @@
   "directories": {
     "example": "examples"
   },
-  "type": "module",
   "types": "index.d.ts",
   "exports": {
     ".": {
