@@ -12,6 +12,7 @@ TAG_VERSION=${TAG_VERSION/v/}
 # Publish the package
 echo "publishing ${TAG_VERSION}"
 npm publish --tag ${TAG_VERSION}
+echo "versioning package ${TAG_VERSION}"
 npm version ${TAG_VERSION} --no-git-tag-version
 
 # Annotate the build with the types version
