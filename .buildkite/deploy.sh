@@ -10,7 +10,8 @@ git config user.email "Widen Developers"
 git config user.name "widendev@widen.com"
 
 # Publish the package
-npm version ${TAG_VERSION}
+npm publish --tag ${TAG_VERSION}
+npm version ${TAG_VERSION} --no-git-tag-version
 
 # Annotate the build with the types version
 buildkite-agent annotate --style success "Published to \`@widen/react-modal@${TAG_VERSION}\`. Install with the following command:
