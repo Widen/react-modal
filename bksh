@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+NAME="$1.sh"
+FILE=".bksh/${NAME}"
+aws s3 cp s3://buildkite-env-widen/bksh/${NAME} ${FILE}
+chmod u+x ${FILE}
+
+shift # remove first argument
+${FILE} $@
