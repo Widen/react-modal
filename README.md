@@ -1,43 +1,23 @@
 # react-modal
 
-# NOTE
-
-Need feedback to push a new version of `react-modal` forward. See issue [#881](https://github.com/reactjs/react-modal/issues/881). 
-
-
-Accessible modal dialog component for React.JS
-
-[![Build Status](https://api.travis-ci.org/reactjs/react-modal.svg)](https://travis-ci.org/reactjs/react-modal)
-[![Coverage Status](https://coveralls.io/repos/github/reactjs/react-modal/badge.svg?branch=master)](https://coveralls.io/github/reactjs/react-modal?branch=master)
-![gzip size](http://img.badgesize.io/https://unpkg.com/react-modal/dist/react-modal.min.js?compression=gzip)
-[![Join the chat at https://gitter.im/react-modal/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/react-modal/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Accessible modal dialog component for React.JS. Widen created this fork to fix a safari focus issue that was blocking our development. It appears the main react-modal project has not seen any code movement in a while, so this seemed the best direction for now.
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [API documentation](#api-documentation)
-* [Examples](#examples)
-* [Demos](#demos)
+- [Installation](#installation)
+- [API documentation](#api-documentation)
+- [Examples](#examples)
+- [Demos](#demos)
 
 ## Installation
 
-To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
+To install, you can use [yarn](https://yarnpkg.com):
 
-
-    $ npm install --save react-modal
     $ yarn add react-modal
-    
-To install react-modal in React CDN app:
 
-   - Add this CDN script tag after React CDN scripts and before your JS files (for example from [cdnjs](https://cdnjs.com/)): 
+## Releasing new versions
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
-            integrity="sha512-MY2jfK3DBnVzdS2V8MXo5lRtr0mNRroUI9hoLVv2/yL3vrJTam3VzASuKQ96fLEpyYIT4a8o7YgtUs5lPjiLVQ=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"></script>
-
-   - Use `<ReactModal>` tag inside your React CDN app.
-
+To release a new version, ensure your changes are moved to the master branch via PR. In the buildkite build you can now release and set the new version.
 
 ## API documentation
 
@@ -51,23 +31,23 @@ Here is a simple example of react-modal being used in an app with some custom
 styles and focusable input elements within the modal content:
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
+import React from "react";
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
   },
 };
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#yourAppElement');
+Modal.setAppElement("#yourAppElement");
 
 function App() {
   let subtitle;
@@ -79,7 +59,7 @@ function App() {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    subtitle.style.color = "#f00";
   }
 
   function closeModal() {
@@ -122,10 +102,10 @@ local development server using `npm start` or `yarn run start`.
 There are several demos hosted on [CodePen](https://codepen.io) which
 demonstrate various features of react-modal:
 
-* [Minimal example](https://codepen.io/claydiffrient/pen/KNxgav)
-* [Using setAppElement](https://codepen.io/claydiffrient/pen/ENegGJ)
-* [Using onRequestClose](https://codepen.io/claydiffrient/pen/KNjVBx)
-* [Using shouldCloseOnOverlayClick](https://codepen.io/claydiffrient/pen/woLzwo)
-* [Using inline styles](https://codepen.io/claydiffrient/pen/ZBmyKz)
-* [Using CSS classes for styling](https://codepen.io/claydiffrient/pen/KNjVrG)
-* [Customizing the default styles](https://codepen.io/claydiffrient/pen/pNXgqQ)
+- [Minimal example](https://codepen.io/claydiffrient/pen/KNxgav)
+- [Using setAppElement](https://codepen.io/claydiffrient/pen/ENegGJ)
+- [Using onRequestClose](https://codepen.io/claydiffrient/pen/KNjVBx)
+- [Using shouldCloseOnOverlayClick](https://codepen.io/claydiffrient/pen/woLzwo)
+- [Using inline styles](https://codepen.io/claydiffrient/pen/ZBmyKz)
+- [Using CSS classes for styling](https://codepen.io/claydiffrient/pen/KNjVrG)
+- [Customizing the default styles](https://codepen.io/claydiffrient/pen/pNXgqQ)

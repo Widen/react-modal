@@ -15,6 +15,7 @@ _book
 examples/__build__
 coverage
 yarn.lock
+bksh
 
 ## Built folders
 lib
