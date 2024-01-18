@@ -6,8 +6,8 @@ TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha
 TAG_VERSION=${TAG_VERSION/v/}
 
 #setup git
-git config user.email "Widen Developers"
-git config user.name "widendev@widen.com"
+# git config user.email "Widen Developers"
+# git config user.name "widendev@widen.com"
 
 # Publish the package
 npm publish --tag ${TAG_VERSION}
