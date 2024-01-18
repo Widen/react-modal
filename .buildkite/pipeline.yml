@@ -40,9 +40,9 @@ steps:
   - label: "Auto version"
     branches: "master"
     command: |
-      TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha-$(date +%Y%m%d%H%M%S)")
-      TAG_VERSION=${TAG_VERSION/v/}
-      sed 's/"version": "*"/"version": "${TAG_VERSION}"/g' package.json
+      TAG_VERSION=buildkite-agent meta-data get "tag-version"
+      TAG_VERSION=TAG_VERSION/v/
+      npm version TAG_VERSION--no-git-tag-version
     agents:
       queue: builder
     plugins:
