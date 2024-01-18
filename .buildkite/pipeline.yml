@@ -37,12 +37,12 @@ steps:
       NPM_TAG: latest
       NODE_AUTH_TOKEN: ACQUIA_JFROG_TOKEN
 
-  - label: 'Auto version'
-    branches: 'master'
-    command:
-      - TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha-$(date +%Y%m%d%H%M%S)")
-      - TAG_VERSION=${TAG_VERSION/v/}
-      - sed 's/"version": "*"/"version": "${TAG_VERSION}"/g' package.json
+  - label: "Auto version"
+    branches: "master"
+    command: |
+      TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha-$(date +%Y%m%d%H%M%S)")
+      TAG_VERSION=${TAG_VERSION/v/}
+      sed 's/"version": "*"/"version": "${TAG_VERSION}"/g' package.json
     agents:
       queue: builder
     plugins:
