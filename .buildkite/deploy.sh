@@ -5,6 +5,8 @@ set -euo pipefail
 TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha-$(date +%Y%m%d%H%M%S)")
 TAG_VERSION=${TAG_VERSION/v/}
 
+make compile
+
 # Publish the package
 echo "versioning package ${TAG_VERSION}"
 npm version ${TAG_VERSION} --no-git-tag-version
