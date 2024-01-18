@@ -6,7 +6,7 @@ TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha
 TAG_VERSION=${TAG_VERSION/v/}
 
 # Publish the package
-npm publish --tag ${TAG_VERSION}
+npm version ${TAG_VERSION}
 
 # Annotate the build with the types version
 buildkite-agent annotate --style success "Published to \`@widen/react-modal@${TAG_VERSION}\`. Install with the following command:

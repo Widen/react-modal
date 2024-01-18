@@ -26,29 +26,18 @@ steps:
     branches: master
     agents:
       queue: builder
-    plugins: &docker
-      docker#v3.5.0:
+    plugins:
+      - docker#v3.5.0:
         image: quay.io/widen/builder-nodejs:16
         propagate-environment: true
         environment:
           - ACQUIA_JFROG_TOKEN
           - FORCE_COLOR=true
-    env:
-      NPM_TAG: latest
-      NODE_AUTH_TOKEN: ACQUIA_JFROG_TOKEN
-
-  - label: "Auto version"
-    branches: "master"
-    command: |
-      TAG_VERSION=buildkite-agent meta-data get "tag-version"
-      TAG_VERSION=TAG_VERSION/v/
-      npm version TAG_VERSION--no-git-tag-version
-    agents:
-      queue: builder
-    plugins:
-      <<: *docker
-      thedyrt/git-commit#v0.3.0:
+      - thedyrt/git-commit#v0.3.0:
         message: Auto version
         user:
           name: Widen Developers
           email: widendev@widen.com
+    env:
+      NPM_TAG: latest
+      NODE_AUTH_TOKEN: ACQUIA_JFROG_TOKEN
