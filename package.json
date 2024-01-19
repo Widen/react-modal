@@ -25,7 +25,9 @@
     "test": "cross-env NODE_ENV=test karma start",
     "lint": "eslint src/"
   },
-  "author": "Widen",
+  "authors": [
+    "Ryan Florence"
+  ],
   "license": "MIT",
   "packageManager": "yarn@3.3.0",
   "devDependencies": {
