@@ -6,7 +6,7 @@ TAG_VERSION=$(buildkite-agent meta-data get "tag-version" --default "0.0.0-alpha
 TAG_VERSION=${TAG_VERSION/v/}
 
 yarn
-make compile
+make build
 
 # Publish the package
 echo "versioning package ${TAG_VERSION}"
