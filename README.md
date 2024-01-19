@@ -2,11 +2,12 @@
 
 ## Fork notes
 
-This project was forked by Widen to:
+It appears the main react-modal project has not seen any code movement in a while, so this seemed the best direction for now.
+
+This project was forked to:
 
 - fix a keyboard issue that occurs with [nested models](https://github.com/reactjs/react-modal/issues/801) which occurs in one of our main workflows and is critical for accessibility.
 
-Accessible modal dialog component for React.JS. Widen created this fork to fix a safari focus issue that was blocking our development. It appears the main react-modal project has not seen any code movement in a while, so this seemed the best direction for now.
 
 ## Table of Contents
 
