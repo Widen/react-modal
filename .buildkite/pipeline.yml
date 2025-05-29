@@ -28,7 +28,7 @@ steps:
       queue: builder
     plugins:
       - docker#v3.5.0:
-          image: quay.io/widen/builder-nodejs:16
+          image: quay.io/widen/builder-node16:2025-R1
           propagate-environment: true
           environment:
             - ACQUIA_JFROG_USER
